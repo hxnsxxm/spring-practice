@@ -16,7 +16,9 @@ public class MemberController {
     private final MemberService memberService;
 
     public MemberController(MemberService memberService) {
+
         this.memberService = memberService;
+        //System.out.println(memberService.getClass()); //AOP 확인 가능 - 프록시 memberService
     }
 
     @GetMapping("/members/new")
